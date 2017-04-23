@@ -60,13 +60,28 @@ header .headlines {
     z-index: -1;
 }
 header .headlines h4 {color: #fff; font-weight: normal; font-size: 1.15em;}
-header .headlines p {font-size: 13px; color: #d0d5d9;}
+header .headlines p {
+    font-size: 13px;
+    color: #d0d5d9;
+    width: 95%;
+    margin: 1px auto;
+}
 header .headlines div p:first-of-type {margin-top: 6px;}
 header .headlines .l1 {position: absolute; top: 70px; left: -40px;}
 header .headlines .l2 {position: absolute; bottom: 180px; left: -40px;}
 header .headlines .r1 {position: absolute; top: 140px; right: -40px;}
 header .headlines .r2 {position: absolute; bottom: 210px; right: -40px;}
-
+.svgLines {
+    position: absolute;
+     width: 100%;
+      height: 100%;
+      z-index: -1;
+}
+.svgLines .l1 svg {transform: scale(.8,.8) translate(31px,-118px) rotate(-14deg);}
+.svgLines .l2 svg {transform: scale(.9,.8) translate(191px,314px) rotate(310deg);}
+.svgLines .r1 svg {transform: scale(.7,.9) translate(-26px,-252px) rotate(118deg);}
+.svgLines .r2 svg {transform: scale(.5,.6) translate(45px,495px) rotate(132deg);}
+.svgLines svg .dashed{stroke-dasharray: 9;}
 header .middle {
     background-color: #fff;
     width: 55%;
@@ -268,4 +283,5 @@ footer span {font-size: 15px;}
     
 @media (max-width: 500px) {
     footer span {font-size: 8px;}
-} 
+}
+/* =============================== */
