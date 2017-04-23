@@ -32,7 +32,7 @@ nav {
     padding: 15px 0;
     background-color: #fff;
     width: 100%;
-    height: 75px;
+    height: 72px;
 }
 nav .logo h4 {
     padding: 10px 62px;
@@ -43,21 +43,34 @@ nav .logo h4 {
 
 /* ======= Header ======= */
 header {
-    background-color: #506171;
+    background-color: #445464;
     padding: 40px 0 90px;
     height: 120vh;
-    position: relative;
-    z-index: 2;
+    overflow: hidden;
 }
-
 header .upper h2,
 header .upper p {color: #f8ffff;}
 header .upper h2:last-of-type {margin-bottom: 10px;}
 header .upper p {font-size: 17px; margin: 2px 0;}
+header .container {position: relative; z-index: 1;}
+header .headlines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+header .headlines h4 {color: #fff; font-weight: normal; font-size: 1.15em;}
+header .headlines p {font-size: 13px; color: #d0d5d9;}
+header .headlines div p:first-of-type {margin-top: 6px;}
+header .headlines .l1 {position: absolute; top: 70px; left: -40px;}
+header .headlines .l2 {position: absolute; bottom: 180px; left: -40px;}
+header .headlines .r1 {position: absolute; top: 140px; right: -40px;}
+header .headlines .r2 {position: absolute; bottom: 210px; right: -40px;}
+
 header .middle {
     background-color: #fff;
     width: 55%;
-    margin: 60px auto 30px;
+    margin: 75px auto 30px;
     padding: 20px 50px;
     box-shadow: 0px 0px 40px #333;
     -webkit-box-shadow: 0px 0px 40px #333;
@@ -66,12 +79,16 @@ header .middle {
     z-index: 9;
 }
 header .middle img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+    margin-top: -70px;
     padding: 2px;
-    margin-top: -55px;
     border: 1px solid #fff;
     background-color: #fff;
+    box-shadow: -1px 1px 21px #000;
+    -webkit-box-shadow: -1px 1px 21px #000;
+    -moz-box-shadow: -1px 1px 21px #000;
+    -o-box-shadow: -1px 1px 21px #000;
 }
 header .middle h4 {margin: 10px 0 3px;}
 header .middle div span {
@@ -98,7 +115,6 @@ header .middle input[type="submit"] {
     padding: 15px 40px;
 }
 header .middle > span {color: #8d99a7;font-size: 14px; display: block; margin: 15px 0 5px;}
-
 header .buttons button:first-of-type {
     background-color: transparent;
     border: 1px solid #fff;
@@ -110,12 +126,20 @@ header .buttons button:first-of-type {
 .skills .box {width: 33.3333%; margin: 40px 0;}
 .skills .box .icon  {
     background-color: #d9edf8;
-    margin-right: 7%;
-    padding: 8px;
     border-radius: 50%;
-    width: 15%;
+    margin-right: 7%;
+    width: 45px;
+    padding-left: 16px;
+    position: relative;
+    height: 45px;
 }
-.skills .box .icon img {width: 40px; height: 40px;}
+.skills .box .icon img {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 7px;
+}
 .skills .box .text {width: 70%; margin-top: -2px; margin-right: 8%;}
 .skills .box .text p {margin-top: 10px;}
 
@@ -131,8 +155,8 @@ header .buttons button:first-of-type {
 .testimonials .box {
     background-color: #fff;
     padding: 45px 40px;
-    width: 40%;
-    margin: 0 5%;
+    width: 44%;
+    margin: 0 3%;
     box-shadow: 0px 0px 5px #999;
     -webkit-box-shadow: 0px 0px 5px #999;
     -moz-box-shadow: 0px 0px 5px #999;
@@ -143,8 +167,9 @@ header .buttons button:first-of-type {
     width: 80px;
     height: 80px;
     float: left;
+    margin-right: 7px;
 }
-.testimonials .client .info {margin-left: 32%; padding-top: 8px;}
+.testimonials .client .info {padding-top: 8px;}
 .testimonials .client .info span {
     display: block;
     font-size: 14px;
@@ -185,3 +210,62 @@ footer {
     color: #fff;
 }
 footer span {font-size: 15px;}
+
+/* ================ Media ================ */
+/*for Large screen*/
+@media (max-width: 1200px) {
+    header {height: 135vh;}
+    .skills .box {width: 50%; margin: 25px auto;}
+}
+
+/*for Medium screen and less*/
+@media (max-width: 992px) {
+    section {padding: 55px 0;}
+    header {height: 125vh;}
+    header .headlines {display: none;}
+    header .middle {width: 90%;}
+    header .upper h2 {font-size: 1.3em;}
+    p {font-size: 90%;}
+    header .middle img {
+        width: 100px;
+        height: 100px;
+        margin-top: -60px;
+    }
+    q {font-size: 90%;}
+    h3 {font-size: 1.05em;}
+    h4 {font-size: .95em;}
+    .skills .box h3 {font-size: 1.3em;}
+    .testimonials .box {width: 90%; margin-bottom: 30px;}
+    .testimonials .client > img {width: 85px; height: 85px;}
+    .testimonials .client .info span,
+    .testimonials .client .info a {font-size: 13px;}
+    .FAQ > h2 {margin: 15px 0 20px;}
+    .FAQ .box {margin: 20px 15%; width: 70%; text-align: center;}
+    .FAQ .box p {margin-top: 15px;}
+    footer span {font-size: 13px;}
+}
+
+/*for Small screen and less*/
+@media (max-width: 768px) {
+    section {padding: 35px 0;}
+    header {height: 130vh;}
+    header .upper h2 {font-size: 1.15em;}
+    p {font-size: 80%;}
+    header .middle img {
+        width: 90px;
+        height: 90px;
+        margin-top: -55px;
+    }
+    .skills .box {width: 100%; margin: 20px auto;}
+    h3 {font-size: 1.2em;}
+    h4 {font-size: .9em;}
+    .testimonials .box {width: 100%;}
+    .testimonials .client .info span,
+    .testimonials .client .info a {font-size: 12px;}
+    .FAQ .box {margin: 20px 5%; width: 90%;}
+    footer span {font-size: 10px;}
+}
+    
+@media (max-width: 500px) {
+    footer span {font-size: 8px;}
+} 
