@@ -43,10 +43,13 @@ nav .logo h4 {
 
 /* ======= Header ======= */
 header {
-    background-color: #445464;
     padding: 40px 0 90px;
     height: 120vh;
     overflow: hidden;
+    background: linear-gradient(#596a7a, #314150);
+    -webkit-background: linear-gradient(#596a7a, #314150);
+    -moz-background: linear-gradient(#596a7a, #314150);
+    -o-background: linear-gradient(#596a7a, #314150);
 }
 header .upper h2,
 header .upper p {color: #f8ffff;}
@@ -119,7 +122,8 @@ header .middle input[type="email"] {
     border: 1px solid #f7f7f9;
     padding: 15px;
     width: 58%;
-    margin-right: 2%
+    margin-right: 2%;
+    margin-bottom: 3px;
 }
 header .middle input[type="submit"] {
     background-color: #8697a9;
