@@ -287,6 +287,6 @@ footer span {font-size: 15px;}
 }
     
 @media (max-width: 500px) {
-    footer span {font-size: 8px;}
+    footer span {display: block; float: none !important; margin: 2px auto;}
 }
 /* =============================== */
